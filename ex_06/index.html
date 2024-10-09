@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <title>Test Vue.js</title>
+</head>
+<body>
+<div id="app">
+  <p>{{ message }}</p>
+  <ol>
+    <li>Le meilleur animal de compagnie au monde est {{ blank1 }}</li>
+    <li>number1 * number2 est égal à {{ blank2 }}</li>
+    <li>number1 divisé par 2 est égal à {{ blank3 }}</li>
+    <li>number2 élevé à la puissance 3 est égal à {{ blank4 }}</li>
+    <li>{{ blank5 }}</li>
+    <li>{{ blank6 }}</li>
+    <li>{{ blank7 }}</li>
+  </ol>
+  <p>Debug: {{ debugMessage }}</p>
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Vue fonctionne !',
+    pet: 'Chat',
+    number1: 6,
+    number2: 7,
+    sentence1: 'Test',
+    sentence2: 'Test inversé',
+    sentence3: 'Test majuscule et inversé',
+    debugMessage: 'Goood'
+  },
+  computed: {
+    blank1() { return this.pet },
+    blank2() { return this.number1 * this.number2 },
+    blank3() { return this.number1 / 2 },
+    blank4() { return Math.pow(this.number2, 3) },
+    blank5() { return this.sentence1.toUpperCase() },
+    blank6() { return this.sentence2.split('').reverse().join('') },
+    blank7() { return this.sentence3.toUpperCase().split('').reverse().join('') }
+  }
+})
+</script>
+</body>
+</html>
