@@ -2,7 +2,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const tooltipContents = {
+        '#image-element': 'Pure CSS!',
         '#button-element': 'Pure CSS!',
+        '#square-element': 'Pure CSS!',
+        '#sound-element': 'Pure CSS!',
+        '#video-element': 'Pure CSS!'
 
     };
 
